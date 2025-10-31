@@ -8,3 +8,5 @@ The Sim files are used to generate histograms and critical values using simulate
 The det var files include an estimated trend to represent the expected outcome.
 
 The det var spread files use pre-game spreads to determine the trend.
+
+The combined program files call mutiple programs to produce all the results across multiple seasons for Tables 6 and 7.
