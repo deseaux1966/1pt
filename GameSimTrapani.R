@@ -1,6 +1,6 @@
 library(tseries)
-nobs=125
-trials=100000
+nobs=100
+trials=1000000
 TRvec=vector(mode="numeric",length=trials)
 H=ceiling(nobs^0.25)      #+2 Option?
 a=0.5
@@ -31,18 +31,16 @@ for(j in 1:trials){
     
     if (ran1[k]<1-alpha1*p1make) {score1[k]=0
     } else if (ran1[k]<1-alpha1*p1make+alpha1*p12pt) {score1[k]=2
-    } else if (ran1[k]<1-alpha1*p1make+alpha1*p13pt) {score1[k]=3
+    } else if (ran1[k]<1-alpha1*p1make+alpha1*p12pt+alpha1*p13pt) {score1[k]=3
     } else {score1[k]=1
     }
     if (ran2[k]<1-alpha2*p2make) {score2[k]=0
     } else if (ran2[k]<1-alpha2*p2make+alpha2*p22pt) {score2[k]=2
-    } else if (ran2[k]<1-alpha2*p2make+alpha2*p23pt) {score2[k]=3
+    } else if (ran2[k]<1-alpha2*p2make+alpha2*p22pt+alpha2*p23pt) {score2[k]=3
     } else {score2[k]=1
     }
     mar[k]=mar[k-1]+score1[k]-score2[k] 
-    
   }
-
 
   Y<-a/(a+mar^2)
   rjlist<-acf(Y,lag.max=10,type="covariance",plot="False",demean="True")

@@ -21,12 +21,12 @@ names(dfNBA)[1]<-"id"
 
 dfNBA$mar<-dfNBA$home_score-dfNBA$away_score
 
-games<-1080  #the number of regular season games
+ids<-unique(dfNBA$id)
+games<-length(ids)
+
 TRvec=vector(mode="numeric",length=games)
 
-ids<-(22000000+1):(22000000+1080)
-
-for(j in 1:1080){
+for(j in 1:games){
 dfk<-subset(dfNBA,id==ids[j])
 mar<-dfk$mar
 
@@ -38,4 +38,4 @@ TRvec[j]<-rj[1]+2*sum(rj[2:(H+1)]*w[1:H])
 }
 
 hist(TRvec,freq=FALSE,breaks=40,xlim=c(0,0.5))
-ks.test(TRvecNBA,TRvec07,alternative="greater")
+#ks.test(TRvecNBA,TRvec07,alternative="greater")
