@@ -1,5 +1,5 @@
 # 1pt
-The programs in R listed here are used to generate the results in "1 Points = 1 Point?".  The *.csv file is a sample of the game data used for the NBA stats results.  Complete data files are propietary and are available from bigdataball.com.
+The programs in R listed here are used to generate the results in "1 Points = 1 Point?".  The *.csv file is a sample of the game data used for the NBA stats results.  Look at the "combined programs" files first to get an overview.
 
 To generate results, the "combined-stats.csv" should be un zipped first or changed to "combined-stats-4-games.csv". The latter is a small file for demonstration purposes. In R, the directory must be set to the location of the data file.
 
