@@ -7,12 +7,13 @@ a=0.5
 
 alpha=0.7
 sig=1.0
-p1ft=0.145
-p2ft=0.145
-p13pt=0.1211
-p23pt=0.1211
-p12pt=0.269
-p22pt=0.269
+#2020-21 regular season scoring probabilities from Table S6
+p1ft=0.074
+p2ft=0.074
+p13pt=0.133
+p23pt=0.133
+p12pt=0.331
+p22pt=0.331
 p1make=p13pt+p12pt+p1ft
 p2make=p13pt+p12pt+p1ft
 

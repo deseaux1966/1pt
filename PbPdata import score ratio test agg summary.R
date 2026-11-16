@@ -1,3 +1,5 @@
+#The program creates the summary statistics graphs such as Table 1 in "1pt"
+
 #Set the working director where the file to be imported is.
 #set reg=1 for regular season games, reg=0 for playoff games
 library(sjmisc)

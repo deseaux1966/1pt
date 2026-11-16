@@ -25,7 +25,7 @@ library(stringr)
 library(tidyverse)
 library(readxl)
 
-game<-"[2021-06-29]-0042000304-MIL@ATL"
+game<-"[2020-12-22]-0022000001-GSW@BKN"
 season<-"2020-2021"
 betaest<-0.237825     #for use inserting estimated trends
 file<-paste0(game,".csv")
@@ -73,10 +73,10 @@ ggplot(dfNBA,aes(x = poss, y = mar)) +
            color = "magenta", size = 3) +
   annotate("text", x = max(dfNBA$poss), y = beta * max(dfNBA$poss) + 0, 
            label = "spread", hjust = 1.1, vjust = -0.2, color = "magenta") +
-  geom_abline(slope = betaest, intercept = 0, color = "darkgreen", linetype = "dashed",lwd=0.4) +
+  #geom_abline(slope = betaest, intercept = 0, color = "darkgreen", linetype = "dashed",lwd=0.4) +
   
-  annotate("text", x = max(dfNBA$poss), y = betaest * max(dfNBA$poss) + 0, 
-           label = "estimated trend", hjust = 1.1, vjust = 4, color = "darkgreen") +
+  #annotate("text", x = max(dfNBA$poss), y = betaest * max(dfNBA$poss) + 0, 
+           #label = "estimated trend", hjust = 1.1, vjust = 4, color = "darkgreen") +
   scale_x_continuous(limits = c(0, max(dfNBA$poss)), expand = expansion(mult = c(0, 0.01))) +
   labs(x = "Possessions", 
        y = "Margin", 

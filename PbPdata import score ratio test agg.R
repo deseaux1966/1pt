@@ -1,3 +1,5 @@
+#Creates the estimation results tables for ratio test across breaks such as Table 2 in '1 pt'.
+
 #Set the working director where the file to be imported is.
 #set reg=1 for regular season games, reg=0 for playoff games
 library(sjmisc)
